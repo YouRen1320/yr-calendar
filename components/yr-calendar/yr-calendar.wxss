@@ -154,7 +154,13 @@
 /* 每周行 */
 .week-row {
     display: flex;
+    align-items: center;
     margin-bottom: 10px;
+}
+
+/* 最后一行去除下边距 */
+.week-row:last-child {
+    margin-bottom: 0;
 }
 
 /* 日期格子 */
@@ -177,8 +183,9 @@
 }
 
 /* 其他月份的日期 */
-.date-cell.other-month .cell-day {
-    color: rgba(200, 200, 200, 0.5);
+.date-item.other-month .day-label,
+.date-item.other-month .day-number {
+    color: rgba(156, 156, 156, 1);
 }
 
 /* 日期数字 - 和周视图保持一致 */
