@@ -58,11 +58,12 @@
     flex-direction: column;
     align-items: center;
     flex: 1;
+    padding: 10px 0;
+    /* 统一给所有日期项目加padding */
 }
 
 .date-item.selected {
     background: rgba(65, 134, 253, 1);
-    padding: 10px 0;
     border-radius: 2px;
 }
 
@@ -163,39 +164,16 @@
     margin-bottom: 0;
 }
 
-/* 日期格子 */
-.date-cell {
+/* 月视图中的日期项目额外样式 */
+.month-container .date-item {
     flex: 1;
     height: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
     margin: 0 1px;
-}
-
-/* 选中状态 - 和周视图保持一致 */
-.date-cell.selected {
-    background: rgba(65, 134, 253, 1);
-    padding: 10px 0;
-    border-radius: 2px;
 }
 
 /* 其他月份的日期 */
 .date-item.other-month .day-label,
 .date-item.other-month .day-number {
     color: rgba(156, 156, 156, 1);
-}
-
-/* 日期数字 - 和周视图保持一致 */
-.cell-day {
-    margin: 4px 0;
-    color: rgba(59, 59, 59, 1);
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.cell-day.selected {
-    color: rgba(255, 255, 255, 1);
 }
