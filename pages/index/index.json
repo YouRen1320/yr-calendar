@@ -1,3 +1,5 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "yr-calendar": "/components/yr-calendar/yr-calendar"
+    }
 }

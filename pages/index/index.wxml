@@ -1,1 +1,3 @@
-<view>测试页</view>
+<view style="height: 100vh;background-color: rgba(249, 250, 254, 1);">
+    <yr-calendar></yr-calendar>
+</view>

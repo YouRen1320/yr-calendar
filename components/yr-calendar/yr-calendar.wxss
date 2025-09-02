@@ -1,0 +1,194 @@
+/* 日历容器 */
+.yr-calendar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* 头部样式 */
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 20px 30px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-date {
+    font-size: 22px;
+    font-weight: 500;
+    color: rgba(45, 54, 72, 1);
+    margin-right: 13px;
+}
+
+.dropdown-arrow {
+    width: 13px;
+    height: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.calendar-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.today-text {
+    color: rgba(156, 156, 156, 1);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* 日期区域 */
+.dates-container {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.date-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.date-item.selected {
+    background: rgba(65, 134, 253, 1);
+    padding: 10px 0;
+    border-radius: 2px;
+}
+
+.day-label {
+    color: rgba(156, 156, 156, 1);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.day-label.selected {
+    color: rgba(255, 255, 255, 1);
+}
+
+.day-number {
+    margin: 4px 0;
+    color: rgba(59, 59, 59, 1);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.day-number.selected {
+    color: rgba(255, 255, 255, 1);
+}
+
+.day-dot {
+    width: 7px;
+    height: 7px;
+}
+
+/* 展开按钮 */
+.expand-button {
+    display: flex;
+    margin: 13px 0 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.expand-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* 底部按钮区域 */
+.bottom-actions {
+    display: flex;
+    padding: 0 29px 18px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.action-button {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.action-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+
+/* ======== 月视图样式 ======== */
+.month-container {
+    padding: 0 24px;
+}
+
+/* 星期标题行 */
+.month-week-header {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.week-header-item {
+    flex: 1;
+    text-align: center;
+    color: rgba(156, 156, 156, 1);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* 每周行 */
+.week-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+/* 日期格子 */
+.date-cell {
+    flex: 1;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 1px;
+}
+
+/* 选中状态 - 和周视图保持一致 */
+.date-cell.selected {
+    background: rgba(65, 134, 253, 1);
+    padding: 10px 0;
+    border-radius: 2px;
+}
+
+/* 其他月份的日期 */
+.date-cell.other-month .cell-day {
+    color: rgba(200, 200, 200, 0.5);
+}
+
+/* 日期数字 - 和周视图保持一致 */
+.cell-day {
+    margin: 4px 0;
+    color: rgba(59, 59, 59, 1);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cell-day.selected {
+    color: rgba(255, 255, 255, 1);
+}
