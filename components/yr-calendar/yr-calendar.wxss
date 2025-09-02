@@ -96,7 +96,7 @@
 /* 展开按钮 */
 .expand-button {
     display: flex;
-    margin: 13px 0 15px;
+    margin: 13px 0 0;
     justify-content: center;
     align-items: center;
 }
@@ -104,33 +104,6 @@
 .expand-icon {
     width: 24px;
     height: 24px;
-}
-
-/* 底部按钮区域 */
-.bottom-actions {
-    display: flex;
-    padding: 0 29px 18px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.action-button {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-}
-
-.action-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-}
-
-.action-text {
-    font-size: 14px;
-    font-weight: 400;
-    color: black;
 }
 
 /* ======== 月视图样式 ======== */
@@ -167,7 +140,6 @@
 /* 月视图中的日期项目额外样式 */
 .month-container .date-item {
     flex: 1;
-    height: 60px;
     position: relative;
     margin: 0 1px;
 }

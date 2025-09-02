@@ -3,10 +3,10 @@
     <view class="calendar-header">
         <view class="header-left">
             <text class="header-date">{{year}}.{{month}}</text>
-            <image src="/assets/image/DropDownArrow.png" class="dropdown-arrow" />
+            <image src="/assets/images/project/DropDownArrow.png" class="dropdown-arrow" />
         </view>
         <view class="header-right">
-            <image src="/assets/image/TheCalendar.png" class="calendar-icon" />
+            <image src="/assets/images/project/TheCalendar.png" class="calendar-icon" />
             <text class="today-text">回到今天</text>
         </view>
     </view>
@@ -16,7 +16,7 @@
         <view class="date-item {{item.isSelected ? 'selected' : ''}}" wx:for="{{nowWeekDays}}" wx:key="index" data-date="{{item.date}}" bind:tap="onWeekDateTap">
             <text class="day-label {{item.isSelected ? 'selected' : ''}}">{{item.weekLabel}}</text>
             <text class="day-number {{item.isSelected ? 'selected' : ''}}">{{item.date}}</text>
-            <image src="{{item.isToday ? '/assets/image/sureDot.png' : '/assets/image/Dot.png'}}" class="day-dot" />
+            <image src="{{item.isToday ? '/assets/images/project/sureDot.png' : '/assets/images/project/Dot.png'}}" class="day-dot" />
         </view>
     </view>
     <!-- 月视图 -->
@@ -25,23 +25,12 @@
             <view class="date-item {{dateItem.isCurrentMonth ? '' : 'other-month'}} {{dateItem.isSelected ? 'selected' : ''}}" wx:for="{{item}}" wx:key="index" wx:for-item="dateItem" wx:for-index="dayIndex" data-week-index="{{weekIndex}}" data-day-index="{{dayIndex}}" data-date="{{dateItem.date}}" bind:tap="onMonthDateTap">
                 <text class="day-label {{dateItem.isSelected ? 'selected' : ''}}">{{dateItem.weekLabel}}</text>
                 <text class="day-number {{dateItem.isSelected ? 'selected' : ''}}">{{dateItem.date}}</text>
-                <image src="{{dateItem.isToday ? '/assets/image/sureDot.png' : '/assets/image/Dot.png'}}" class="day-dot" />
+                <image src="{{dateItem.isToday ? '/assets/images/project/sureDot.png' : '/assets/images/project/Dot.png'}}" class="day-dot" />
             </view>
         </view>
     </view>
     <!-- 展开全部按钮——日历默认只显示一周，点击该按钮以后显示全部本月 -->
     <view class="expand-button" bind:tap="showMonth">
-        <image src="/assets/image/unfolding.png" class="expand-icon" />
-    </view>
-    <!-- 班次和设置按钮 -->
-    <view class="bottom-actions">
-        <view class="action-button">
-            <image src="/assets/image/settings.png" class="action-icon" />
-            <text class="action-text">考勤班次</text>
-        </view>
-        <view class="action-button">
-            <image src="/assets/image/settings.png" class="action-icon" />
-            <text class="action-text">打卡位置</text>
-        </view>
+        <image src="/assets/images/project/{{isMonthView?'pullUp.png':'unfolding.png'}}" class="expand-icon" />
     </view>
 </view>
