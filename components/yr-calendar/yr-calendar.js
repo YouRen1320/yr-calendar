@@ -12,7 +12,7 @@ Component({
      * 组件的初始数据
      */
     data: {
-        isMonthView: true, //是否显示本月视图
+        isMonthView: false, //是否显示本月视图
         currentYear: 2025, //当前年份
         currentMonth: 8, //当前月份
         weekDays: [], //当前周
@@ -26,15 +26,15 @@ Component({
         // 显示本月
         showMonth() {
             this.setData({
-                isMonthView: !isMonthView,
+                isMonthView: !this.data.isMonthView,
             })
-            if (this.data.isMonthView) {
-                //显示本月视图
-                this.calculateMonthDays();
-            } else {
-                // 显示本周视图
-                this.calculateWeekDays();
-            }
+            // if (this.data.isMonthView) {
+            //     //显示本月视图
+            //     this.calculateMonthDays();
+            // } else {
+            //     // 显示本周视图
+            //     this.calculateWeekDays();
+            // }
         }
     }
 })
